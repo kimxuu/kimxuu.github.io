@@ -16,6 +16,10 @@
 
     const style = document.createElement('style');
     style.textContent = `
+    ruby.inject-jyutping {
+        position: relative;
+    }
+
     ruby.inject-jyutping > rt {
         position: relative;
         margin-left: 0.1em;
@@ -27,7 +31,7 @@
     }
 
     ruby.inject-jyutping > rt, rhyme {
-        font-family: "Segoe UI", Calibri, system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+        font-family: "Segoe UI", Calibri, Roboto, Arial, Tahoma, Geneva, Verdana, sans-serif !important;
     }
 
     ruby.inject-jyutping > rt::before {
