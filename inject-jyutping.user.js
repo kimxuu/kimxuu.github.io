@@ -1025,7 +1025,7 @@
     const mo = new MutationObserver(changes => {
         for (const change of changes) {
             for (const node of change.addedNodes) {
-                forEachText(node, convertText);
+                requestAnimationFrame(() => forEachText(node, convertText));
             }
         }
     });
@@ -1069,10 +1069,10 @@
 
         popup.addEventListener('click', e => {
             if (e.target.tagName !== 'SPAN') return;
-                e.stopPropagation();
-                const pronunciation = e.target.textContent;
-                rt.style.cssText = parseSyllable(pronunciation);
-                closePopup(popup);
+            e.stopPropagation();
+            const pronunciation = e.target.textContent;
+            rt.style.cssText = parseSyllable(pronunciation);
+            closePopup(popup);
         });
 
         popup.addEventListener('blur', () => closePopup(popup));
@@ -1081,7 +1081,7 @@
     function init() {
         document.head.appendChild(style);
         forEachText(document.body, convertText);
-        setTimeout(function() {
+        setTimeout(() => {
             mo.observe(document.body, {
                 characterData: true,
                 childList: true,
