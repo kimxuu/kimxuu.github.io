@@ -1025,7 +1025,7 @@
     const mo = new MutationObserver(changes => {
         for (const change of changes) {
             for (const node of change.addedNodes) {
-                requestAnimationFrame(() => forEachText(node, convertText));
+                setTimeout(() => forEachText(node, convertText), 50);
             }
         }
     });
