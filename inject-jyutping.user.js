@@ -379,6 +379,8 @@
         纤手: 'hin1 sau2',
         拉纤: 'laai1 hin1',
 
+        窍: 'hiu3',
+
         翘课: 'kiu3 fo3',
         翘辫子: 'kiu3 bin1 zi2',
         翘尾: 'kiu3 mei5',
@@ -937,6 +939,8 @@
         腾涌: 'tang4 jung2',
         汹涌: 'hung1 jung2',
         风起云涌: 'fung1 hei2 wan4 jung2',
+
+        韵: 'wan5',
 
         占比: 'zim3 bei2',
         占据: 'zim3 geoi3',
